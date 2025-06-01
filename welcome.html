@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bem-vinda, Preta ❤️</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff0f6;
+      margin: 20px;
+      color: #333;
+      position: relative;
+    }
+
+    .contador {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #fce4ec;
+      border: 1px solid #f48fb1;
+      border-radius: 20px;
+      padding: 10px 15px;
+      font-size: 0.9rem;
+      color: #880e4f;
+      box-shadow: 0 2px 5px rgba(136, 14, 79, 0.2);
+      z-index: 999;
+    }
+
+    .ler-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #f48fb1;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 18px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 999;
+      transition: transform 0.2s ease;
+    }
+
+    .ler-btn:hover {
+      transform: scale(1.05);
+    }
+
+    h2 {
+      text-align: center;
+      color: #b03060;
+      margin-top: 80px;
+    }
+
+    .feed {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .post {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(176, 48, 96, 0.2);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .localizacao {
+      padding: 10px 15px 0;
+      font-size: 0.9rem;
+      color: #b03060;
+      font-weight: 500;
+    }
+
+    .post img,
+    .post video {
+      width: 100%;
+      display: block;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .post-content {
+      padding: 15px;
+    }
+
+    .date {
+      font-size: 0.9rem;
+      color: #b03060;
+      margin-bottom: 8px;
+    }
+
+    .caption {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .likes {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .like-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: transform 0.2s ease;
+    }
+
+    .like-button.clicked {
+      animation: pop 0.4s ease;
+      color: #e91e63;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.4); }
+      100% { transform: scale(1); }
+    }
+
+    @media screen and (max-width: 600px) {
+      .contador, .ler-btn {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+        top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contador" id="contador">❤️ Carregando tempo juntos...</div>
+  <button class="ler-btn" onclick="window.location.href='topicos.html'">❤️ Ler</button>
+
+  <h2>Nosso Feed de Momentos</h2>
+
+  <div class="feed">
+    <div class="post">
+      <div class="localizacao">📍 Araxá</div>
+      <img src="img/diafeliz.JPG" alt="Dia Feliz" />
+      <div class="post-content">
+        <div class="date">Data especial</div>
+        <div class="caption">Um dia que sempre estará no meu coração ❤️</div>
+        <div class="likes">
+          <button class="like-button" onclick="curtir(this)">❤️</button>
+          <span class="like-count">153</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="localizacao">📍 Lugar especial, com pessoas especiais</div>
+      <video controls width="100%">
+        <source src="img/poucobarulho.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+      <div class="post-content">
+        <div class="date">Momento capturado em vídeo</div>
+        <div class="caption">Mesmo com pouco barulho, a festa foi grande ❤️</div>
+        <div class="likes">
+          <button class="like-button" onclick="curtir(this)">❤️</button>
+          <span class="like-count">167</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="localizacao">📍 Um momento só nosso</div>
+      <video controls width="100%">
+        <source src="img/prova1.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+      <div class="post-content">
+        <div class="date">Um instante guardado em vídeo</div>
+        <div class="caption">Uma prova de roupa, para o meu consultor ❤️</div>
+        <div class="likes">
+          <button class="like-button" onclick="curtir(this)">❤️</button>
+          <span class="like-count">182</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="localizacao">📍 Casamento Primo</div>
+      <img src="img/sorriso.JPG" alt="Nosso sorriso" />
+      <div class="post-content">
+        <div class="date">Um dia que ficou na memória</div>
+        <div class="caption">Seu sorriso é meu lugar preferido 💖</div>
+        <div class="likes">
+          <button class="like-button" onclick="curtir(this)">❤️</button>
+          <span class="like-count">164</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="localizacao">📍 Rio de Janeiro</div>
+      <video controls width="100%">
+        <source src="img/pagode.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+      <div class="post-content">
+        <div class="date">Mais um momento nosso em ritmo de samba</div>
+        <div class="caption">Dançar com você é sempre o melhor som 🎶❤️</div>
+        <div class="likes">
+          <button class="like-button" onclick="curtir(this)">❤️</button>
+          <span class="like-count">189</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="localizacao">📍 Nosso cantinho favorito</div>
+      <img src="img/nos.png" alt="Nos dois" />
+      <div class="post-content">
+        <div class="date">Um momento nosso</div>
+        <div class="caption">Só nós dois e o mundo lá fora 💑🌍</div>
+        <div class="likes">
+          <button class="like-button" onclick="curtir(this)">❤️</button>
+          <span class="like-count">201</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="localizacao">📍 Lugar cheio de amor</div>
+      <img src="img/bjabracado.jpg" alt="Beijo abraçado" />
+      <div class="post-content">
+        <div class="date">Um carinho especial</div>
+        <div class="caption">Aquele abraço com gosto de beijo 💋🤗</div>
+        <div class="likes">
+          <button class="like-button" onclick="curtir(this)">❤️</button>
+          <span class="like-count">174</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="localizacao">📍Em casa</div>
+      <video controls preload="none" width="100%" height="auto" src="img/prova2.mp4"></video>
+      <div class="post-content">
+        <div class="date">Momento para recordar</div>
+        <div class="caption">Mas uma prova de roupa, agora para curti o reveillon 🎥❤️</div>
+        <div class="likes">
+          <button class="like-button" onclick="curtir(this)">❤️</button>
+          <span class="like-count">120</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Contador de tempo juntos
+    function atualizarContador() {
+      const dataInicio = new Date('2024-04-11T00:00:00');
+      const agora = new Date();
+
+      let diff = agora - dataInicio;
+
+      if (diff < 0) {
+        document.getElementById('contador').textContent = "Ainda não começamos nossa história!";
+        return;
+      }
+
+      const segundos = Math.floor(diff / 1000) % 60;
+      const minutos = Math.floor(diff / (1000 * 60)) % 60;
+      const horas = Math.floor(diff / (1000 * 60 * 60)) % 24;
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24)) % 365;
+      const anos = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+
+      document.getElementById('contador').textContent =
+        `❤️ ${anos}a ${dias}d ${horas}h ${minutos}m ${segundos}s juntos`;
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+
+    // Função de curtida
+    function curtir(botao) {
+      const countSpan = botao.nextElementSibling;
+      let count = parseInt(countSpan.textContent);
+      botao.classList.add('clicked');
+      count++;
+      countSpan.textContent = count;
+
+      setTimeout(() => {
+        botao.classList.remove('clicked');
+      }, 400);
+    }
+  </script>
+</body>
+</html>

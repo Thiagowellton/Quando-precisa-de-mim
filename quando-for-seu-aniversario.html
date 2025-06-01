@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quando for seu aniversário</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff8e1;
+      color: #5d4037;
+      overflow-x: hidden;
+    }
+
+    h2 {
+      text-align: center;
+      color: #d84315;
+      margin-top: 30px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 20px;
+    }
+
+    .imagem-bolo {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .imagem-bolo img {
+      width: 200px;
+      height: auto;
+    }
+
+    .cupons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px;
+    }
+
+    .cupom {
+      background: #ffe0b2;
+      border: 2px dashed #ff7043;
+      padding: 15px 25px;
+      border-radius: 15px;
+      font-weight: bold;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+      font-size: 1rem;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .voltar {
+      text-align: center;
+      margin: 40px;
+    }
+
+    .voltar button {
+      background: #f4511e;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .voltar button:hover {
+      background-color: #d84315;
+    }
+
+    /* Animação de balões */
+    .balao {
+      position: absolute;
+      width: 40px;
+      height: 55px;
+      background: #ffcc80;
+      border-radius: 50% 50% 45% 45%;
+      animation: subir 8s linear infinite;
+      opacity: 0.7;
+    }
+
+    .balao::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 30px;
+      background: #a1887f;
+      top: 55px;
+      left: 50%;
+    }
+
+    @keyframes subir {
+      0% {
+        bottom: -60px;
+        transform: translateX(0);
+      }
+      100% {
+        bottom: 100%;
+        transform: translateX(100px);
+      }
+    }
+
+    /* Vários balões */
+    .balao:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .balao:nth-child(2) { left: 30%; animation-delay: 2s; background: #ffab91; }
+    .balao:nth-child(3) { left: 50%; animation-delay: 4s; background: #ffe082; }
+    .balao:nth-child(4) { left: 70%; animation-delay: 6s; background: #ce93d8; }
+    .balao:nth-child(5) { left: 85%; animation-delay: 3s; background: #80deea; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Balões animados -->
+  <div class="balao"></div>
+  <div class="balao"></div>
+  <div class="balao"></div>
+  <div class="balao"></div>
+  <div class="balao"></div>
+
+  <h2>LEIA QUANDO FOR SEU ANIVERSÁRIO 🎉</h2>
+
+  <p>Feliz aniversário, minha coisa linda! Hoje é o seu dia e ele merece ser tão especial quanto você é pra mim. Você é um presente que a vida me deu, e hoje é dia de celebrar tudo o que você é. Amo você absurdamente!</p>
+
+  <div class="imagem-bolo">
+    <img src="img/bolo.png" alt="Bolo de Aniversário">
+  </div>
+
+  <div class="cupons">
+    <div class="cupom">🎁 Vale um jantar romântico</div>
+    <div class="cupom">🎲 Vale uma noite de jogos</div>
+    <div class="cupom">🧸 Vale um dia inteiro só de chamego</div>
+  </div>
+
+  <div class="voltar">
+    <button onclick="location.href='topicos.html'">Voltar para os tópicos</button>
+  </div>
+
+</body>
+</html>

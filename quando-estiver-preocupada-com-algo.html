@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quando estiver preocupada com algo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #e3f2fd;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1565c0;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .vale-relaxar {
+      border: 2px dashed #1565c0;
+      padding: 15px;
+      text-align: center;
+      border-radius: 12px;
+      margin-top: 30px;
+      font-weight: bold;
+      background-color: #ffffffaa;
+      color: #1565c0;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .imagens-duplas {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .imagens-duplas figure {
+      text-align: center;
+      max-width: 150px;
+    }
+
+    .imagens-duplas img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .imagens-duplas figcaption {
+      margin-top: 8px;
+      font-style: italic;
+      color: #1565c0;
+    }
+
+    .voltar {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .voltar button {
+      background: #1565c0;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .voltar button:hover {
+      background: #0d47a1;
+    }
+
+    /* Nuvens animadas */
+    .nuvens {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100px;
+      background: url('https://i.imgur.com/ZI1V57F.png') repeat-x;
+      animation: moverNuvens 60s linear infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes moverNuvens {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="nuvens"></div>
+
+  <h2>LEIA QUANDO ESTIVER PREOCUPADA COM ALGO</h2>
+
+  <p>Oi princesa, sinto muito por você estar assim. Sei que é fácil dizer que vai passar e que tudo vai ficar bem, mas pensa comigo: daqui um tempo você vai lembrar disso e nem vai mais saber por que se preocupou tanto. Relaxa, vida 💙</p>
+
+  <p>Mas aqui vão algumas dicas pra te ajudar a tirar isso da cabeça (pelo menos por um tempinho) e ficar mais calma:</p>
+
+  <ul>
+    <li>• Mude e redirecione o seu foco</li>
+    <li>• Escute alguma música calma para relaxar</li>
+    <li>• Saia um pouco pra caminhar ou jogar aquele futevôlei</li>
+    <li>• Me liga se quiser ❤️</li>
+    <li>• Toma um chazinho quentinho 🍵</li>
+  </ul>
+
+  <div class="vale-relaxar">
+    🎟️ Vale um momento de relaxamento total 💆‍♀️
+  </div>
+
+  <div class="imagens-duplas">
+    <figure>
+      <img src="img/gt01.png" alt="vai sair disso">
+      <figcaption>Vai sair disso</figcaption>
+    </figure>
+    <figure>
+      <img src="img/gt02.png" alt="Para isso">
+      <figcaption>Para isso</figcaption>
+    </figure>
+  </div>
+
+  <div class="voltar">
+    <button onclick="location.href='topicos.html'">Voltar para os tópicos</button>
+  </div>
+
+</body>
+</html>

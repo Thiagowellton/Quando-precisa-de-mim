@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leia quando precisar rir</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff0f6;
+      color: #333;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #b03060;
+      margin-bottom: 20px;
+    }
+
+    .texto {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    video {
+      display: block;
+      margin: 30px auto;
+      max-width: 100%;
+      border: 10px solid #f8bbd0;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .piada-container {
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    #piada {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #b03060;
+    }
+
+    .botao-piada {
+      background: #f48fb1;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(176, 48, 96, 0.4);
+      transition: background-color 0.3s ease;
+    }
+
+    .botao-piada:hover {
+      background: #b03060;
+    }
+
+    .voltar {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .voltar a {
+      text-decoration: none;
+      color: #b03060;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>LEIA QUANDO PRECISAR RIR</h2>
+
+  <div class="texto">
+    <p>Oi, minha risadinha preferida 😄</p>
+    <p>Se você está aqui, é porque o dia tá meio cinza, o humor fugiu, ou talvez só bateu aquela vontade de dar uma gargalhada gostosa. Então deixa comigo, que vou tentar mudar isso agora!</p>
+    <p>Sabia que você é tão linda que até seu choro parece slow motion de novela mexicana?</p>
+    <p>E quando você fica brava? Parece um pimentão estressado com sotaque de drama! (Mas mesmo brava, continua sendo a coisa mais fofa do planeta).</p>
+    <p>Se riso fosse remédio, eu já te receitaria:</p>
+    <ul>
+      <li>• 2 colheres de meme por hora;</li>
+      <li>• 1 comprimido de vídeo bobo antes de dormir;</li>
+    </ul>
+    <p>Lembre-se:<br>Se rir é o melhor remédio, então namorar comigo deve ser tipo farmácia 24h.</p>
+    <p>Agora respira fundo...<br>Solta um sorriso bem safado...</p>
+  </div>
+
+  <video controls>
+    <source src="img/leo.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo.
+  </video>
+
+  <div class="piada-container">
+    <button class="botao-piada" onclick="mostrarPiada()">Clique aqui para uma piada boba 😂</button>
+    <p id="piada"></p>
+  </div>
+
+  <div class="voltar">
+    <a href="topicos.html">← Voltar para os tópicos</a>
+  </div>
+
+  <script>
+    const piadas = [
+      "O que o zero disse pro oito? — Que cinto maneiro!",
+      "Por que o lápis foi preso? — Porque ele apontou o crime!",
+      "Qual o animal mais antigo? — A zebra, porque é em preto e branco.",
+      "Por que o jacaré tirou o jacarezinho da escola? — Porque ele réptil de ano!",
+      "Qual o cúmulo da distração? — Esquecer a piada no meio do... do quê mesmo?",
+      "O que o tomate foi fazer no banco? — Tirar extrato!"
+    ];
+
+    function mostrarPiada() {
+      const aleatoria = Math.floor(Math.random() * piadas.length);
+      document.getElementById("piada").textContent = piadas[aleatoria];
+    }
+  </script>
+
+</body>
+</html>

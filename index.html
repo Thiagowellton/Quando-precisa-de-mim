@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="login">
+  <div class="coracoes-container" id="coracoes-container"></div>
+
+  <div class="login-container">
+    <h2>Bem-vinda, Minha Preta 💖</h2>
+    <input type="text" id="username" placeholder="Usuário" />
+    <input type="password" id="password" placeholder="Senha" />
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      if (user === "MinhaPreta" && pass === "Saudade") {
+        window.location.href = "welcome.html";
+      } else {
+        alert("Usuário ou senha incorretos 😢");
+      }
+    }
+
+    // Corações caindo
+    const container = document.getElementById('coracoes-container');
+    setInterval(() => {
+      const coracao = document.createElement('div');
+      coracao.classList.add('coracao');
+      coracao.style.left = Math.random() * 100 + 'vw';
+      coracao.style.fontSize = (Math.random() * 20 + 10) + 'px';
+      coracao.innerText = '❤️';
+      container.appendChild(coracao);
+
+      setTimeout(() => {
+        coracao.remove();
+      }, 5000);
+    }, 300);
+  </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quando não conseguir dormir</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #dbeafe; /* Azul suave */
+      color: #333;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .vale {
+      margin-top: 30px;
+      border: 2px dashed #1e3a8a;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      background-color: #e0f2fe;
+      color: #1e3a8a;
+      font-size: 1.2rem;
+      width: 220px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .link-spotify {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #1e3a8a;
+      text-decoration: none;
+    }
+
+    /* Botão de voltar */
+    .voltar {
+      display: block;
+      margin: 50px auto 0;
+      background-color: #c084fc;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      width: fit-content;
+    }
+
+    .voltar:hover {
+      background-color: #a855f7;
+    }
+
+    /* Estrelas animadas */
+    .estrela {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      animation: cair 10s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes cair {
+      0% {
+        transform: translateY(-10px);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>LEIA QUANDO NÃO CONSEGUIR DORMIR<br>
+  <span style="font-size: 0.9rem;">(SE BEM QUE ISSO É BEM DIFÍCIL DE ACONTECER COM VOCÊ)</span>
+  </h2>
+
+  <p>Oi minha preta, que pena que não está conseguindo dormir ☹</p>
+  <p>Mas me manda uma mensagem, não importa o horário viu, se precisar conversar, dividir um pensamento, ou só ter alguém junto com você...</p>
+  <p>Espero conseguir te ajudar e que você consiga dormir de novo.</p>
+  <p>Aqui estão algumas coisinhas pra te ajudar a relaxar e pegar no sono:</p>
+
+  <a class="link-spotify" href="https://open.spotify.com/playlist/4IX2GdECzW88uT8ZYBz8VB?si=oJ3geDe2SJWUdfcqys4iww" target="_blank">🌧️ Escuta um barulhinho de chuva</a>
+
+  <div class="vale">🎫 Vale 1 cochilo bem gostosinho</div>
+
+  <a href="topicos.html" class="voltar">← Voltar para os tópicos</a>
+
+  <!-- Estrelas animadas -->
+  <script>
+    function criarEstrela() {
+      const estrela = document.createElement("div");
+      estrela.classList.add("estrela");
+      estrela.style.left = Math.random() * window.innerWidth + "px";
+      estrela.style.animationDuration = (6 + Math.random() * 4) + "s";
+      estrela.style.width = estrela.style.height = (2 + Math.random() * 4) + "px";
+      document.body.appendChild(estrela);
+      
+      setTimeout(() => {
+        estrela.remove();
+      }, 10000);
+    }
+
+    setInterval(criarEstrela, 300);
+  </script>
+
+</body>
+</html>

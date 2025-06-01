@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quando estiver se sentindo insegura</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff0f6;
+      color: #333;
+      padding: 20px;
+      margin: 0;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    h2 {
+      color: #b03060;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: justify;
+    }
+
+    .face {
+      margin: 30px auto 10px;
+      width: 120px;
+      height: 120px;
+      background: #f48fb1;
+      border-radius: 50%;
+      position: relative;
+      box-shadow: 0 0 10px rgba(176, 48, 96, 0.6);
+    }
+
+    .eye {
+      position: absolute;
+      top: 40px;
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      border-radius: 50%;
+      overflow: visible;
+      animation: pulse 1.5s infinite;
+    }
+
+    .eye.left {
+      left: 25px;
+    }
+
+    .eye.right {
+      right: 25px;
+    }
+
+    /* Coração dentro dos olhos */
+    .eye::before, .eye::after {
+      content: "❤";
+      position: absolute;
+      color: #b03060;
+      font-size: 24px;
+      top: 3px;
+      left: 3px;
+      animation: pulse 1.5s infinite;
+    }
+
+    .eye::after {
+      left: 12px;
+      top: 12px;
+      font-size: 20px;
+      animation-delay: 0.75s;
+    }
+
+    /* Boca sorridente */
+    .mouth {
+      position: absolute;
+      bottom: 35px;
+      left: 50%;
+      width: 50px;
+      height: 20px;
+      border-bottom: 5px solid #b03060;
+      border-radius: 0 0 50px 50px;
+      transform: translateX(-50%);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.3);
+        opacity: 0.7;
+      }
+    }
+
+    .caption {
+      font-size: 1rem;
+      color: #b03060;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* Botão padrão para voltar */
+    .btn-voltar {
+      background: #f48fb1;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(176, 48, 96, 0.4);
+      transition: background-color 0.3s ease;
+      margin: 30px auto 0;
+      display: block;
+      width: fit-content;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .btn-voltar:hover {
+      background: #b03060;
+    }
+
+    /* Container para os vídeos */
+    .video-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 650px;
+      margin: 30px auto;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Estilo para os vídeos */
+    video {
+      width: 48%;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(176, 48, 96, 0.5);
+      border: 3px solid #b03060;
+      background: #fff0f6;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>LEIA QUANDO ESTIVER SE SENTINDO INSEGURA</h2>
+
+  <p>Oi minha linda, sou eu de novo hehe, quero que você saiba que você é a mulher mais linda, gata e gostosa desse mundo todo, se brincar desse universo, você é tão perfeita, sério, linda demais. Não deixe que esse sentimento ruim cresça em você, você é uma GOSTOSAAAAAA e LINDAAAAAAA, vamos conversar pra você tirar essa ideia da cabeça, eu hein, sua lindaaaaaa.</p>
+
+  <p>Eu só fico bobo pelo seu sorriso, sério me deixa até fraco das pernas, até esqueço o que tô fazendo, pensando, é hipnotizante demais, tudo em você, de verdade, fico horas do dia pensando em você, eu amo cada detalhe do seu rosto lindo, do seu corpo, de tudo em você, porque você é surreal de linda, fico bobo só de pensar em você.</p>
+
+  <div class="video-container">
+    <video src="img/cabelo.mp4" controls muted></video>
+    <video src="img/leoa.mp4" controls muted></video>
+  </div>
+
+  <div class="face">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <div class="caption">É assim que eu fico quando te vejo</div>
+
+  <button class="btn-voltar" onclick="location.href='topicos.html'">Voltar para tópicos</button>
+
+</body>
+</html>
